@@ -6,7 +6,7 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     const confirmeSenha = document.getElementById("confirmeSenha").value;
   
     if (Senha !== confirmeSenha) {
-      alert("As duas senhas estão diferentes");
+      //Exibir um p no html 
       return;
     }
   
@@ -17,8 +17,8 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     };
   
     localStorage.setItem(Email, JSON.stringify(user));
-    alert("Cadastro completo com sucesso por favor faça o login.");
-    window.location.href = "login.html";
+    //javela nova com a cnfimação de que o usuario foi cadastrado 
+     
   });
   
   class MobileNavbar {
