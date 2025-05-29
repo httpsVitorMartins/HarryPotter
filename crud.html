@@ -18,7 +18,6 @@
     <div id="userList"></div>
   </div>
 
-  <!-- Modal -->
   <div class="modal" id="editModal">
     <div class="modal-content">
       <h2>Editar Usuário</h2>
@@ -91,15 +90,11 @@
       localStorage.removeItem(email);
       loadUsers();
     }
-
-    // Fechar modal ao clicar fora
     window.onclick = function(event) {
       if (event.target == modal) {
         modal.style.display = "none";
       }
     }
-
-    // Carregar usuários ao abrir
     loadUsers();
   </script>
 </body>
