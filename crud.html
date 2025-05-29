@@ -51,7 +51,27 @@
     </div>
 
   </div>
-  <script>
+  <script>function carregar() {
+      const lista = JSON.parse(localStorage.getItem('itens')) || [];
+      const ul = document.getElementById('lista');
+      ul.innerHTML = '';
+
+      lista.forEach((item, index) => {
+        const li = document.createElement('tr');
+       tr.innerHTML = `
+    <td>${item.nome}</td>
+    <td>${item.funcao}</td>
+    <td>R$ ${item.salario}</td>
+    <td class="acao">
+      <button onclick="editItem(${index})"><i class='bx bx-edit' ></i></button>
+    </td>
+    <td class="acao">
+      <button onclick="deleteItem(${index})"><i class='bx bx-trash'></i></button>
+    </td>
+  `
+  tbody.appendChild(tr)
+      });
+    }
   </script>
 </body>
 </html>
